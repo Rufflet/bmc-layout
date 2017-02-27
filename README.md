@@ -2,9 +2,9 @@
 
 This website uses several other projects:
 
- - [Foundation for Sites]()
+ - [Foundation for Sites](https://github.com/zurb/foundation-sites)
  - [jQuery](https://github.com/jquery/jquery)
- - [FontAwesome]()
+ - [FontAwesome](https://github.com/FortAwesome/Font-Awesome/)
  
 
  
