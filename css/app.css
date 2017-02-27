@@ -1,0 +1,45 @@
+/*Layout*/
+.wide-sidebar .position-left {
+    width: 350px;
+}
+@media print, screen and (min-width: 64em) {
+    .position-left.reveal-for-large ~ .off-canvas-content {
+        margin-left: 350px;
+    }
+}
+
+/*Left menu customization (.left-menu)*/
+.left-menu {
+    font-size: 14px;   
+}
+
+    /*Accordeon*/
+    .accordion_theme_compact {
+        
+    }
+    .left-menu .accordion-item {
+        background: #1779ba;
+    }
+    .left-menu .accordion-title {
+        padding: 0.5rem 1rem;
+        color: #fefefe;
+    }
+    .left-menu .accordion-title:hover, .left-menu .accordion-title:focus {
+        background-color: #135c8c;
+    }
+    .left-menu .accordion-content {
+        padding: 0;
+    }
+
+    /*Vertical menu*/
+    .left-menu .menu > li:hover {
+        background-color: #e4e7e8;
+    }
+    .left-menu .menu > li > a {
+        padding: 0.3rem 0.7rem;
+    }
+
+    /*Badge*/
+    .left-menu .badge {
+        font-size: 0.8rem;
+    }

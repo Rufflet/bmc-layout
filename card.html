@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>BMC REMEDY layout implementation</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/foundation.css" type="text/css">
+    <link rel="stylesheet" href="css/app.css" type="text/css">
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+
+
+    <script>
+        $(document)
+            .ready(function () {
+                $(document).foundation();
+
+            });
+    </script>
+</head>
+
+<body class="wide-sidebar">
+    <div class="off-canvas position-left reveal-for-large" id="offCanvas" data-off-canvas>
+
+        <!-- Close button -->
+        <!--<button class="close-button" aria-label="Close menu" type="button" data-close>
+      <span aria-hidden="true">&times;</span>
+    </button>-->
+
+        <!-- Accordeon -->
+        <ul class="accordion left-menu" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+            <li class="accordion-item is-active" data-accordion-item>
+                <a href="#" class="accordion-title">Количество инцидентов</a>
+                <div class="accordion-content" data-tab-content>
+                    <ul class="vertical menu">
+                        <li><a href="#"><i class="fa fa-folder-open-o" style="color:#3adb76"></i> Открытые <span class="badge success float-right">880</span></a></li>
+                        <li><a href="#"><i class="fa fa-folder-open-o" style="color:#ffae00"></i> Не назначены <span class="badge warning float-right">17</span></a></li>
+                        <li><a href="#"><i class="fa fa-folder-open-o" style="color:#1779ba"></i> Без подтверждения <span class="badge primary float-right">50</span></a></li>
+                        <li><a href="#"><i class="fa fa-folder-open-o" style="color:#cc4b37"></i> Нарушено <span class="badge alert float-right">217</span></a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="accordion-item" data-accordion-item>
+                <a href="#" class="accordion-title">Заданные поиски</a>
+                <div class="accordion-content" data-tab-content>
+                    <p>Управление моими поисками:</p>
+                    <ul class="vertical menu" data-accordion-menu>
+                        <li>
+                            <a href="#">Заданные поиски</a>
+                            <ul class="menu vertical nested">
+                                <li><a href="#">Все открытые</a>
+                                    <ul class="menu vertical nested">
+                                        <li><a href="#">Все приоритеты</a></li>
+                                        <li><a href="#">Критические приоритеты</a></li>
+                                        <li><a href="#">Высокий приоритет</a></li>
+                                        <li><a href="#">Средний приоритет</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Все открытые, назначенные мне</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Список просмотра</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="accordion-item is-active" data-accordion-item>
+                <a href="#" class="accordion-title">Функции</a>
+                <div class="accordion-content" data-tab-content>
+                    <ul class="vertical menu">
+                        <li><a href="#">Новый инцидент</a></li>
+                        <li><a href="#">Поиск инцидента</a></li>
+                        <li><a href="#">Мой профиль</a></li>
+                        <li><a href="#">Предпочтения приложения</a></li>
+                        <li><a href="#">Напоминания</a></li>
+                        <li><a href="#">Отчёты</a></li>
+                        <li><a href="#">Управление КЕ</a></li>
+                        <li><a href="#">Обзор процесса</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="accordion-item is-active" data-accordion-item>
+                <a href="#" class="accordion-title">Консоли</a>
+                <div class="accordion-content" data-tab-content>
+                    <ul class="vertical menu">
+                        <li><a href="#">Страница "ИТ. Главная"</a></li>
+                        <li><a href="#">Обзор</a></li>
+                        <li><a href="#">Управление проблемами</a></li>
+                        <li><a href="#">Консоль утверждения</a></li>
+                        <li><a href="#">CMDB</a></li>
+                        <li><a href="#">Запросы на обслуживание</a></li>
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+
+
+
+    </div>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+        <!-- Right frame here -->
+        <div class="row expanded ">
+            <div class="small-6 columns">
+                <!-- Left column -->
+                <div class="callout">
+                    <label>ID инцидента*
+                        <input type="text" placeholder="Укажите ID инцидента">
+                    </label>
+                    <label>Компания*
+                        <select>
+                            <option value="husker">Компания 1</option>
+                            <option value="starbuck">Компания 2</option>
+                            <option value="hotdog">Компания 3</option>
+                            <option value="apollo">Компания 4</option>
+                        </select>
+                    </label>
+                    <label>Заказчик*
+                        <div class="input-group">
+                            <input class="input-group-field" type="text" placeholder="Выберите заказчика">
+                            <div class="input-group-button">
+                                <button type="button" class="button success"><i class="fa fa-plus-circle"></i></button>
+                            </div>
+                            <div class="input-group-button">
+                                <button type="button" class="button alert"><i class="fa fa-minus-circle"></i></button>
+                            </div>
+                        </div>
+                    </label>
+                    <label>Контакт*
+                        <div class="input-group">
+                            <input class="input-group-field" type="text" placeholder="Укажите контакт">
+                            <div class="input-group-button">
+                                <button type="button" class="button success"><i class="fa fa-plus-circle"></i></button>
+                            </div>
+                            <div class="input-group-button">
+                                <button type="button" class="button alert"><i class="fa fa-minus-circle"></i></button>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div class="callout">
+                    <label>Тема запроса/обращения*
+                        <div class="input-group">
+                            <input class="input-group-field" type="text" placeholder="Выберите заказчика">
+                            <div class="input-group-button">
+                                <button type="button" class="button"><i class="fa fa-list"></i></button>
+                            </div>
+                        </div>
+                    </label>
+                    <label>Подробности
+                        <textarea placeholder="Подсказка для поля"></textarea>
+                    </label>
+                    <label>Шаблон
+                        <input type="text" disabled>
+                    </label>
+                </div>
+            </div>
+            <div class="small-6 columns">
+                <!-- Right column -->
+                <div class="callout">
+                    <ul class="tabs" data-tabs id="example-tabs">
+                        <li class="tabs-title is-active"><a href="#panel1">Детали работы</a></li>
+                        <li class="tabs-title"><a href="#panel2">Связи</a></li>
+                        <li class="tabs-title"><a href="#panel3">Дата/Система</a></li>
+                    </ul>
+                    <div class="tabs-content" data-tabs-content="example-tabs">
+                        <div class="tabs-panel is-active" id="panel1">
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th width="200">Table Header</th>
+                                        <th>Table Header</th>
+                                        <th width="150">Table Header</th>
+                                        <th width="150">Table Header</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Content Goes Here</td>
+                                        <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+                                        <td>Content Goes Here</td>
+                                        <td>Content Goes Here</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Content Goes Here</td>
+                                        <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                                        <td>Content Goes Here</td>
+                                        <td>Content Goes Here</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Content Goes Here</td>
+                                        <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                                        <td>Content Goes Here</td>
+                                        <td>Content Goes Here</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <div class="tabs-panel" id="panel2">
+                            <p>Suspendisse dictum feugiat nisl ut dapibus. Vivamus hendrerit arcu sed erat molestie vehicula.
+                                Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Sed
+                                auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
