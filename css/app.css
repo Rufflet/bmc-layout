@@ -43,3 +43,28 @@
     .left-menu .badge {
         font-size: 0.8rem;
     }
+
+
+/*Foundation overrides*/
+table thead {
+    background: #1779ba;
+    color: #fefefe;
+}
+
+table tr.colored-green {
+    background: #3adb76;
+    color: #0a0a0a;;
+}
+table tr.colored-orange {
+    background: #ffae00;
+    color: #0a0a0a;;
+}
+table tr.colored-blue {
+    background: #1779ba;
+    color: #fefefe;
+}
+table tr.colored-red {
+    background: #cc4b37;
+    color: #fefefe;
+}
+

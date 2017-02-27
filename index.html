@@ -106,6 +106,18 @@
         <!-- Right frame here -->
         <div class="row expanded">
             <div class="small-12 columns">
+                <h4>Консоль инцидента</h4>
+            </div>
+
+        </div>
+        <div class="row expanded">
+            <div class="small-12 columns">
+                <div class="small button-group">
+                    <a class="primary button"><i class="fa fa-file-o" aria-hidden="true"></i> Создать</a>
+                    <a class="success button"><i class="fa fa-search" aria-hidden="true"></i> Просмотр</a>
+                    <a class="secondary button"><i class="fa fa-print" aria-hidden="true"></i> Печать</a>
+                    <button class="hollow button secondary float-right">Добавить в список просмотра</button>
+                </div>
                 <table>
                     <thead>
                         <tr>
@@ -120,7 +132,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="colored-green">
                             <td>dummy</td>
                             <td>dummy</td>
                             <td>dummy</td>
@@ -140,7 +152,7 @@
                             <td>dummy</td>
                             <td>dummy</td>
                         </tr>
-                        <tr>
+                        <tr class="colored-orange">
                             <td>dummy</td>
                             <td>dummy</td>
                             <td>dummy</td>
@@ -160,7 +172,7 @@
                             <td>dummy</td>
                             <td>dummy</td>
                         </tr>
-                        <tr>
+                        <tr class="colored-blue">
                             <td>dummy</td>
                             <td>dummy</td>
                             <td>dummy</td>
@@ -180,7 +192,7 @@
                             <td>dummy</td>
                             <td>dummy</td>
                         </tr>
-                        <tr>
+                        <tr class="colored-red">
                             <td>dummy</td>
                             <td>dummy</td>
                             <td>dummy</td>
@@ -217,61 +229,102 @@
                 <div class="callout">
                     <div class="row expanded">
                         <!-- Задачи и детали инцидента -->
-                        <div class="small-4 columns">
+                        <div class="small-5 columns">
                             <h6>Задачи и детали инцидента</h6>
                             <div class="row">
-                                <div class="small-3 columns">
+                                <div class="small-4 columns">
                                     <label for="input-1" class="text-right middle">Причина состояния</label>
                                 </div>
-                                <div class="small-9 columns">
+                                <div class="small-8 columns">
                                     <input type="text" id="input-1" placeholder="Не забываем про плейсхолдеры" value="Фиксация контакта поддержки">
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="small-3 columns">
+                                <div class="small-4 columns">
                                     <label for="input-2" class="text-right middle">Назначено группе</label>
                                 </div>
-                                <div class="small-9 columns">
+                                <div class="small-8 columns">
                                     <input type="text" id="input-2" placeholder="Не забываем про плейсхолдеры" value="Москва поддержка Remedy">
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="small-3 columns">
+                                <div class="small-4 columns">
                                     <label for="input-3" class="text-right middle">Сообщенная дата</label>
                                 </div>
-                                <div class="small-9 columns">
+                                <div class="small-8 columns">
                                     <input type="text" id="input-3" placeholder="Не забываем про плейсхолдеры" value="11.11.2014 13:07:25">
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="small-3 columns">
+                                <div class="small-4 columns">
                                     <label for="input-4" class="text-right middle">Клиент</label>
                                 </div>
-                                <div class="small-9 columns">
+                                <div class="small-8 columns">
                                     <input type="text" id="input-4" placeholder="Не забываем про плейсхолдеры" value="Посыльный, Сергей Владимирович">
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="small-3 columns">
+                                <div class="small-4 columns">
                                     <label for="input-5" class="text-right middle">Причина состояния</label>
                                 </div>
-                                <div class="small-9 columns">
+                                <div class="small-8 columns">
                                     <textarea id="input-5" placeholder="Подсказка для поля">по инцидентам</textarea>
                                     <p class="help-text">Здесь может быть подсказка к полю</p>
                                 </div>
                             </div>
                         </div>
                         <!-- Table Grid -->
-                        <div class="small-8 columns">
+                        <div class="small-7 columns">
                             <div class="row">
-                                <div class="button-group">
+                                <div class="tiny expanded button-group">
                                     <a class="primary button"><i class="fa fa-file-o" aria-hidden="true"></i> Создать</a>
                                     <a class="success button"><i class="fa fa-search" aria-hidden="true"></i> Просмотр</a>
                                     <a class="secondary button"><i class="fa fa-print" aria-hidden="true"></i> Отчет</a>
 
                                     <button class="hollow button secondary float-right" href="#">Показать задания <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></button>
                                 </div>
-                                
+                            </div>
+                            <div class="row">
+                                <div class="callout">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td>Тип</td>
+                                                <td>Содержание</td>
+                                                <td>Дата создания</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>somedata</td>
+                                                <td>somedata</td>
+                                                <td>somedata</td>
+                                            </tr>
+                                            <tr>
+                                                <td>somedata</td>
+                                                <td>somedata</td>
+                                                <td>somedata</td>
+                                            </tr>
+                                            <tr>
+                                                <td>somedata</td>
+                                                <td>somedata</td>
+                                                <td>somedata</td>
+                                            </tr>
+                                            <tr>
+                                                <td>somedata</td>
+                                                <td>somedata</td>
+                                                <td>somedata</td>
+                                            </tr>
+                                            <tr>
+                                                <td>somedata</td>
+                                                <td>somedata</td>
+                                                <td>somedata</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
                             </div>
 
                         </div>
