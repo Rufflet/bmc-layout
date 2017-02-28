@@ -52,19 +52,19 @@ table thead {
 }
 
 table tr.colored-green {
-    background: #3adb76;
-    color: #0a0a0a;;
+    background: rgba(58, 219, 118, 0.5);
+    color: #0a0a0a;
 }
 table tr.colored-orange {
-    background: #ffae00;
-    color: #0a0a0a;;
+    background: rgba(255, 174, 0, 0.5);
+    color: #0a0a0a;
 }
 table tr.colored-blue {
-    background: #1779ba;
-    color: #fefefe;
+    background: rgba(23, 121, 186, 0.5);
+    color: #0a0a0a;
 }
 table tr.colored-red {
-    background: #cc4b37;
-    color: #fefefe;
+    background: rgba(204, 75, 55, 0.5);
+    color: #0a0a0a;
 }
 
