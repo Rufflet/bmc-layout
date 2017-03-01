@@ -1,3 +1,8 @@
+html {
+    font-size: 14px;
+}
+
+
 /*Layout*/
 .wide-sidebar .position-left {
     width: 350px;
@@ -9,9 +14,9 @@
 }
 
 /*Left menu customization (.left-menu)*/
-.left-menu {
+/*.left-menu {
     font-size: 14px;   
-}
+}*/
 
     /*Accordeon*/
     .accordion_theme_compact {
@@ -23,6 +28,7 @@
     .left-menu .accordion-title {
         padding: 0.5rem 1rem;
         color: #fefefe;
+        font-size: 1rem;
     }
     .left-menu .accordion-title:hover, .left-menu .accordion-title:focus {
         background-color: #135c8c;
@@ -68,3 +74,37 @@ table tr.colored-red {
     color: #0a0a0a;
 }
 
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+    height: 2rem;
+    margin: 0 0 0.5rem;
+}
+.input-group-label, .input-group-field, .input-group-button, .input-group-button a, .input-group-button input, .input-group-button button, .input-group-button label {
+    margin: 0;
+}
+.input-group-field {
+    height: 2rem;
+}
+.input-group-button a, .input-group-button input, .input-group-button button, .input-group-button label {
+    height: 2rem;
+}
+select { 
+    height: 2rem;
+    margin: 0 0 0.5rem;
+    padding: 0 1.5rem 0rem 0.5rem;
+}
+label.middle {
+    margin: 0 0 0.5rem;
+    padding: 0.25rem 0;
+}
+
+
+
+
+
+
+
+
+
+.tabs-title > a {
+    font-size: 1rem;
+}
