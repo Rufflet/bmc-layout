@@ -108,3 +108,24 @@ label.middle {
 .tabs-title > a {
     font-size: 1rem;
 }
+
+.steps {
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    border-collapse: collapse;
+}
+.steps tbody {
+    border: none;
+}
+
+.steps td {
+    border-right: 3px solid white;
+}
+
+.steps .blue {
+    background: #1779ba;
+    color: #fefefe;
+}
+.steps .green {
+    background: #3adb76;
+    color: #fefefe;
+}
